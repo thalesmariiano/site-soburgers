@@ -10,8 +10,6 @@ const maisSabores = document.querySelector('#mais-sabores')
 const adicionarCarrinho = document.querySelector('#adicionar-carrinho')
 
 const circlePlate = document.querySelector('#circle-plate')
-const twoSlices = Array(...document.querySelectorAll('.two-slices'))
-const threeSlices = Array(...document.querySelectorAll('.three-slices'))
 
 const fecharModalButton = document.querySelector('#fechar-modal-descontos')
 
@@ -21,7 +19,7 @@ const categoryName = document.querySelector('#category-name')
 
 const sizeButton = document.querySelector('#size-button')
 const sizeContainer = document.querySelector('#size-container')
-const sizeName = document.querySelector('#size-name')
+// const sizeName = document.querySelector('#size-name')
 
 const pizzasType = document.querySelectorAll('[name="pizza-type"]')
 
@@ -60,24 +58,24 @@ pizzasType.forEach(checkbox => {
 })
 
 selectButton.addEventListener('click', categorySelect)
-sizeButton.addEventListener('click', sizeSelect)
+// sizeButton.addEventListener('click', sizeSelect)
 
-function sizeSelect(){
-	const isActive = sizeButton.dataset.selectActive == 'true'
+// function sizeSelect(){
+// 	const isActive = sizeButton.dataset.selectActive == 'true'
 
-	if(selectButton.dataset.selectActive == 'true'){
-		selectButton.dataset.selectActive = false
-		selectContainer.style.display = 'none'
-	}
+// 	if(selectButton.dataset.selectActive == 'true'){
+// 		selectButton.dataset.selectActive = false
+// 		selectContainer.style.display = 'none'
+// 	}
 
-	if(!isActive){
-		sizeContainer.style.display = 'initial'
-		sizeButton.dataset.selectActive = 'true'
-		return
-	}
-	sizeContainer.style.display = 'none'
-	sizeButton.dataset.selectActive = 'false'
-}
+// 	if(!isActive){
+// 		sizeContainer.style.display = 'initial'
+// 		sizeButton.dataset.selectActive = 'true'
+// 		return
+// 	}
+// 	sizeContainer.style.display = 'none'
+// 	sizeButton.dataset.selectActive = 'false'
+// }
 
 function categorySelect(){
 	const isActive = selectButton.dataset.selectActive == 'true'
@@ -202,23 +200,23 @@ swiper.on('slideChange', e => {
 		window.localStorage.setItem('touch-guide', 1)
 	}
 
-	const pizzaSize = document.querySelector('[name=pizza-size]:checked').value
-	const gigante =  pizzaSize == 'Gigante' && sabores.length !== 3
-	const grande = pizzaSize == 'Grande' && sabores.length !== 3
-	const media = pizzaSize == 'Média' && sabores.length !== 2
-	const pequena = pizzaSize == 'Pequena' && sabores.length !== 2
+	// const pizzaSize = document.querySelector('[name=pizza-size]:checked').value
+	// const gigante =  pizzaSize == 'Gigante' && sabores.length !== 3
+	// const grande = pizzaSize == 'Grande' && sabores.length !== 3
+	// const media = pizzaSize == 'Média' && sabores.length !== 2
+	// const pequena = pizzaSize == 'Pequena' && sabores.length !== 2
 
-	const giganteFull = () => gigante || grande 
-	const normalFull = () =>  media || pequena
+	// const giganteFull = () => gigante || grande 
+	// const normalFull = () =>  media || pequena
 
-	if(!giganteFull() && !normalFull()){
-		showGuide('#max-flavor-guide-2')
-		showGuide('#click-guide-2')
+	// if(!giganteFull() && !normalFull()){
+	// 	showGuide('#max-flavor-guide-2')
+	// 	showGuide('#click-guide-2')
 
-		setTimeout(() => {
-			showGuide('#click-guide')
-		}, 2000)
-	}
+	// 	setTimeout(() => {
+	// 		showGuide('#click-guide')
+	// 	}, 2000)
+	// }
 	
 	atualizarPizzaInfo(e)
 })
@@ -227,32 +225,32 @@ maisSabores.addEventListener('click', adicionarSabores)
 swiper.on('click', adicionarSabores)
 
 // REINICIA TUDO CASO O TAMANHO DA PIZZA MUDE
-changePizzaSize.forEach(input => {
-	input.addEventListener('click', () => {
-		sizeName.innerHTML = input.value
+// changePizzaSize.forEach(input => {
+// 	input.addEventListener('click', () => {
+// 		sizeName.innerHTML = input.value
 
-		const gigante = input.value == 'Gigante' && previusSize !== 'Grande'
-		const grande = input.value == 'Grande' && previusSize !== 'Gigante'
-		const media = input.value == 'Média' && (previusSize == 'Grande' || previusSize == 'Gigante')
-		const pequena = input.value == 'Pequena' && (previusSize == 'Gigante' || previusSize == 'Grande')
+// 		// const gigante = input.value == 'Gigante' && previusSize !== 'Grande'
+// 		// const grande = input.value == 'Grande' && previusSize !== 'Gigante'
+// 		// const media = input.value == 'Média' && (previusSize == 'Grande' || previusSize == 'Gigante')
+// 		// const pequena = input.value == 'Pequena' && (previusSize == 'Gigante' || previusSize == 'Grande')
 
-		if(input.value !== previusSize) previusSize == input.value
-		else return
+// 		if(input.value !== previusSize) previusSize == input.value
+// 		else return
 
-		if(gigante || grande || media || pequena){
-			const slices = Array(...twoSlices, ...threeSlices)
-			slices.forEach(slice => {
-				slice.src = 'arquivos/images/null.png'
-				slice.dataset.sliceId = ''
-			})
+// 		if(gigante || grande || media || pequena){
+// 			const slices = Array(...twoSlices, ...threeSlices)
+// 			slices.forEach(slice => {
+// 				slice.src = 'arquivos/images/null.png'
+// 				slice.dataset.sliceId = ''
+// 			})
 
-			sabores.length = 0
-			pizzas_selecionadas.innerHTML = ''
-		}
-		previusSize = input.value
+// 			sabores.length = 0
+// 			pizzas_selecionadas.innerHTML = ''
+// 		}
+// 		previusSize = input.value
 		
-	})
-})
+// 	})
+// })
 
 function adicionarSabores(){
 
@@ -263,62 +261,65 @@ function adicionarSabores(){
 	}
 
 	const pizza = pizzasArray.find(p => p.id == pizza_id)
-	const pizzaSize = document.querySelector('[name=pizza-size]:checked').value
+	sabores.push(pizza)
 
-	const gigante =  pizzaSize == 'Gigante' && sabores.length !== 3
-	const grande = pizzaSize == 'Grande' && sabores.length !== 3
-	const media = pizzaSize == 'Média' && sabores.length !== 2
-	const pequena = pizzaSize == 'Pequena' && sabores.length !== 2
 
-	const giganteFull = () => gigante || grande 
-	const normalFull = () =>  media || pequena
+	// const pizzaSize = document.querySelector('[name=pizza-size]:checked').value
 
-	if(giganteFull()){
-		sabores.push(pizza)
+	// const gigante =  pizzaSize == 'Gigante' && sabores.length !== 3
+	// const grande = pizzaSize == 'Grande' && sabores.length !== 3
+	// const media = pizzaSize == 'Média' && sabores.length !== 2
+	// const pequena = pizzaSize == 'Pequena' && sabores.length !== 2
 
-		if(sabores.length == 1){
-			twoSlices[0].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[0].dataset.sliceId = pizza.id
+	// const giganteFull = () => gigante || grande 
+	// const normalFull = () =>  media || pequena
 
-			twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[1].dataset.sliceId = pizza.id
-		}else if(sabores.length == 2){
-			twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[1].dataset.sliceId = pizza.id
-		}else if(sabores.length == 3){
-			twoSlices[0].src = `arquivos/images/null.png`
-			twoSlices[0].dataset.sliceId = ''
-			twoSlices[1].src = `arquivos/images/null.png`
-			twoSlices[1].dataset.sliceId = ''
+	// if(giganteFull()){
+	// 	sabores.push(pizza)
 
-			threeSlices[0].src = `arquivos/images/pizza-${sabores[0].id}.png`
-			threeSlices[0].dataset.sliceId = sabores[0].id
-			threeSlices[1].src = `arquivos/images/pizza-${sabores[1].id}.png`
-			threeSlices[1].dataset.sliceId = sabores[1].id
-			threeSlices[2].src = `arquivos/images/pizza-${pizza.id}.png`
-			threeSlices[2].dataset.sliceId = pizza.id
-		}
-	}
+	// 	if(sabores.length == 1){
+	// 		twoSlices[0].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[0].dataset.sliceId = pizza.id
 
-	if(normalFull()){
-		sabores.push(pizza)
+	// 		twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[1].dataset.sliceId = pizza.id
+	// 	}else if(sabores.length == 2){
+	// 		twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[1].dataset.sliceId = pizza.id
+	// 	}else if(sabores.length == 3){
+	// 		twoSlices[0].src = `arquivos/images/null.png`
+	// 		twoSlices[0].dataset.sliceId = ''
+	// 		twoSlices[1].src = `arquivos/images/null.png`
+	// 		twoSlices[1].dataset.sliceId = ''
 
-		if(sabores.length == 1){
-			twoSlices[0].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[0].dataset.sliceId = pizza.id
-			twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[1].dataset.sliceId = pizza.id
-		}else if(sabores.length == 2){
-			twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
-			twoSlices[1].dataset.sliceId = pizza.id
-		}
-	}
+	// 		threeSlices[0].src = `arquivos/images/pizza-${sabores[0].id}.png`
+	// 		threeSlices[0].dataset.sliceId = sabores[0].id
+	// 		threeSlices[1].src = `arquivos/images/pizza-${sabores[1].id}.png`
+	// 		threeSlices[1].dataset.sliceId = sabores[1].id
+	// 		threeSlices[2].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		threeSlices[2].dataset.sliceId = pizza.id
+	// 	}
+	// }
 
-	if(!giganteFull() && !normalFull()){
-		maisSabores.style.display = 'none'
-		showGuide('#max-flavor-guide')
-		return
-	}
+	// if(normalFull()){
+	// 	sabores.push(pizza)
+
+	// 	if(sabores.length == 1){
+	// 		twoSlices[0].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[0].dataset.sliceId = pizza.id
+	// 		twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[1].dataset.sliceId = pizza.id
+	// 	}else if(sabores.length == 2){
+	// 		twoSlices[1].src = `arquivos/images/pizza-${pizza.id}.png`
+	// 		twoSlices[1].dataset.sliceId = pizza.id
+	// 	}
+	// }
+
+	// if(!giganteFull() && !normalFull()){
+	// 	maisSabores.style.display = 'none'
+	// 	showGuide('#max-flavor-guide')
+	// 	return
+	// }
 
 	pizzas_selecionadas.innerHTML += `
 		<div class="pizza-selected" data-flavor-id="${pizza.id}">
@@ -336,7 +337,6 @@ function adicionarSabores(){
 function removerSabor(id){
 	const flavor = document.querySelector(`[data-flavor-id='${id}']`)
 	const pizza = sabores.findIndex(sabor => sabor.id == id)
-	const sliceToReplace = document.querySelector(`[data-slice-id='${id}']`)
 
 	flavor.remove()
 	sabores.splice(pizza, 1)
@@ -344,27 +344,11 @@ function removerSabor(id){
 	maisSabores.style.display = ''
 
 	if(sabores.length == 1){
-		sliceToReplace.src = `arquivos/images/pizza-${sabores[0].id}.png`
-		sliceToReplace.dataset.sliceId = sabores[0].id
-	}
-
-	if(sabores.length == 2){
-		threeSlices.forEach(slice => {
-			slice.src = `arquivos/images/null.png`
-			slice.dataset.sliceId = ''
-		})
-		twoSlices[0].src = `arquivos/images/pizza-${sabores[0].id}.png`
-		twoSlices[0].dataset.sliceId = sabores[0].id
-		twoSlices[1].src = `arquivos/images/pizza-${sabores[1].id}.png`
-		twoSlices[1].dataset.sliceId = sabores[1].id
+		
 	}
 
 	if(!sabores.length){
-		const slices = Array(...twoSlices, ...threeSlices)
-			slices.forEach(slice => {
-			slice.src = 'arquivos/images/null.png'
-			slice.dataset.sliceId = ''
-		})
+		
 	}
 }
 

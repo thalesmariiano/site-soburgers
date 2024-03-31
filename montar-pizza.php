@@ -15,27 +15,6 @@
 	<!-- ANIMATE.STYLE -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-	<style type="text/css">
-		.pizza-three-path-left {
-			clip-path: polygon(0 0, 50% 0, 50% 50%, 0 75%, 0 50%);
-		}
-		.pizza-three-path-right {
-			clip-path: polygon(50% 0, 100% 0, 100% 50%, 100% 85%, 50% 50%);
-		}
-		.pizza-three-path-bottom {
-			clip-path: polygon(50% 50%, 100% 85%, 100% 100%, 0 100%, 0 75%);
-		}
-		.pizza-two-path-left {
-			clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-		}
-		.pizza-two-path-right {
-			clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-		}
-		.path-default {
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-		}
-	</style>
-
 	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
 </head>
@@ -45,21 +24,16 @@
 
 			<div class="w-full flex gap-x-3 justify-center items-center relative pt-5 mb-2">
 
-				<!-- <a href="index.html" class="inicio-btn">
-					<img class="w-6" src="arquivos/images/icons/shop.svg">
-					Inicio
-				</a> -->
-
 				<div class="w-full flex gap-2 justify-center items-center flex-wrap">
 					<button id="select-button" data-select-active="false" class="select-button">
 						Categoria: <span id="category-name">Todas</span>
 						<img src="arquivos/images/icons/caret-down-fill.svg">
 					</button>
 
-					<button id="size-button" data-size-active="false" class="select-button">
+				<!-- 	<button id="size-button" data-size-active="false" class="select-button">
 						Tamanho: <span id="size-name">Gigante</span>
 						<img src="arquivos/images/icons/caret-down-fill.svg">
-					</button>
+					</button> -->
 				</div>
 
 				<div id="select-container" class="select-container">
@@ -125,7 +99,7 @@
 					</div>
 				</div>
 
-				<div id="size-container" class="size-container">
+				<!-- <div id="size-container" class="size-container">
 					<p class="font-ifood text-center mt-3 text-lg font-bold">Selecione o tamanho:</p>
 					<form class="form-container mt-3">
 						<div class="flex gap-x-2 justify-center items-center">
@@ -156,7 +130,7 @@
 						<p class="font-ifood text-neutral-400 text-sm">Escolha até 3 sabores</p>
 					</div>
 				</div>
-
+ -->
 				<div id="select-guide" onClick="closeGuide(this)" class="absolute top-40 z-[9999] hidden">
 					<div class="select-guide-container">
 						<div class="-rotate-45">
@@ -187,25 +161,6 @@
 
 					<!-- prato da pizza -->
 					<img class="w-72 h-72 drop-shadow-[0_0_15px_rgba(0,0,0,.6)]" src="arquivos/images/pizza-plate.png">
-
-					<!-- Imagem que fica ao fundo ao selecionar a pizza -->
-					<div id="two-slices-container" class="absolute top-4 w-64 h-64">
-						<div class="w-full h-full flex justify-center items-center">
-							<img class="two-slices pizza-two-path-left absolute w-64 h-64" src="arquivos/images/null.png" data-slice-id="">
-							<img class="two-slices pizza-two-path-right absolute w-64 h-64" src="arquivos/images/null.png" data-slice-id="">
-						</div>
-					</div>
-					<!--  -->
-									
-					<!-- Imagem que fica ao fundo ao selecionar a pizza -->			
-					<div id="three-slices-container" class="absolute top-4 w-64 h-64">
-						<div class="w-full h-full flex justify-center items-center">
-							<img class="three-slices pizza-three-path-left absolute w-64 h-64" src="arquivos/images/null.png" data-slice-id="">
-							<img class="three-slices pizza-three-path-right absolute w-64 h-64" src="arquivos/images/null.png" data-slice-id="">
-							<img class="three-slices pizza-three-path-bottom absolute w-64 h-64" src="arquivos/images/null.png" data-slice-id="">
-						</div>
-					</div>
-					<!--  -->
 
 					<!-- swiper slider -->
 					<div class="absolute w-full">
