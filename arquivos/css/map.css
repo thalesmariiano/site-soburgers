@@ -1,0 +1,150 @@
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Light.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Regular.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Medium.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Bold.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: iFoodRCTextos, helvetica, sans-serif;
+    color: #777;
+    line-height: 1.15;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+    background-image: url("https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+555555(-35.054965,-6.798525/-35.054965,-6.798525,18,2/450x450?access_token=pk.eyJ1Ijoibm92b2xhcnBiIiwiYSI6ImNsb2cwYnF5NjAxMXAyanNmaTJ1bmkzM2UifQ.SDDf0ivgMdyvh20_Iu9VGA");
+    height: 100%;
+}
+
+
+
+.local {
+    position: absolute;
+    left: 0;
+    top: 36%;
+    width: 100%;
+    text-align: center;
+    z-index: 999999;
+}
+
+.confirm {
+    position: absolute;
+    left: 0;
+    bottom: 4%;
+    width: 100%;
+    text-align: center;
+    z-index: 999999;
+}
+
+.address-maps-message__title {
+    color: #232221;
+    font-size: 1.2rem;
+}
+
+
+.address-maps-header__title {
+    font-size: .8125rem;
+    color: #595756;
+}
+
+.address-maps-header__description {
+    text-align: center;
+}
+
+.address-maps-message--active {
+    opacity: 1;
+    visibility: 1;
+    transform: translate(-50%, calc(-50% - 80px)) scale(1);
+}
+
+.address-maps-message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 172px;
+    height: 60px;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 80px)) scale(.7);
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
+    transition: all 50ms ease-in;
+    pointer-events: none;
+}
+
+.btn--default {
+    color: #fff;
+}
+
+.btn .btn__label {
+    font-size: 1rem;
+    line-height: 1em;
+    flex-grow: 1;
+    position: relative;
+    top: 1px;
+    text-align: center;
+}
+
+.btn {
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    padding: 0 20px;
+    border-radius: 4px;
+    margin: 3px 0;
+    height: 50px;
+    font-weight: 500;
+    transition: .1s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.address-maps__submit{
+    background-color: #ea1d2c;
+    width: 86vw;
+}

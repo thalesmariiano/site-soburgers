@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: iFoodRCTitulos;
+    src: url(../fonts/iFoodRCTitulos-Light.woff2) format("woff2"), url(../fonts/iFoodRCTitulos-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTitulos;
+    src: url(../fonts/iFoodRCTitulos-Medium.woff2) format("woff2"), url(../fonts/iFoodRCTitulos-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTitulos;
+    src: url(../fonts/iFoodRCTitulos-Regular.woff2) format("woff2"), url(../fonts/iFoodRCTitulos-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTitulos;
+    src: url(../fonts/iFoodRCTitulos-Bold.woff2) format("woff2"), url(../fonts/iFoodRCTitulos-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Light.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Regular.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Medium.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: iFoodRCTextos;
+    src: url(../fonts/iFoodRCTextos-Bold.woff2) format("woff2"), url(../fonts/iFoodRCTextos-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.animate__animated.animate__fadeOut, 
+.animate__animated.animate__fadeIn {
+  --animate-duration: .6s;
+}
+
+.delivery-modal-container {
+	@apply w-full h-full fixed top-0 left-0 z-[9999] bg-neutral-900/30 flex justify-center items-center
+}
+
+.inicio-btn {
+	@apply flex flex-col items-center font-ifood absolute left-2 sm:left-5 bg-neutral-100 border border-neutral-300 rounded px-2 pt-0.5 cursor-pointer
+}
+
+.select-button {
+	@apply w-44 p-2 flex justify-between items-center bg-neutral-200 border-2 border-neutral-300 rounded-xl font-ifood z-[99]
+}
+
+.select-container {
+	@apply w-72 absolute top-20 bg-white rounded-xl border-2 border-neutral-200 shadow-card z-[80] hidden
+}
+
+.form-container {
+	@apply w-full h-full flex flex-col justify-between
+}
+
+.select-col {
+	@apply w-full h-full flex flex-col gap-y-3 justify-center items-center px-2 pt-2 pb-3
+}
+
+.select-item {
+	@apply font-ifood font-semibold text-lg text-neutral-500 transition
+}
+
+.select-guide-container {
+	@apply w-44 sm:w-52 flex flex-col justify-center items-center gap-x-2 bg-neutral-900/80 rounded
+}
+
+.select-guide-text {
+	@apply font-ifood text-center leading-5 text-white
+}
+
+.size-container {
+	@apply absolute top-20 bg-white rounded-xl border-2 border-neutral-200 shadow-card z-[80] px-3 py-2 hidden
+}
+
+.delivery-method {
+	@apply flex gap-x-5 justify-between items-center py-2 px-4 relative cursor-pointer
+}
+
+.delivery-after {
+	@apply after:content-[''] after:absolute after:bottom-0 after:w-1/2 after:h-[3px] after:bg-[#ea1d2c] after:transition-all after:duration-200
+}
+
+.entrega-button {
+	@apply text-center text-[#ea1d2c] font-semibold font-ifood transition-all duration-200
+}
+
+.retirada-button {
+	@apply text-center text-neutral-500 font-semibold font-ifood transition-all duration-200
+}
+
+.line-entrega {
+	@apply after:left-0
+}
+
+.line-retirada {
+	@apply after:left-1/2;
+}
+
+.local-container {
+	@apply flex justify-between items-start h-24 mt-5 relative
+}
+
+.local-item {
+	@apply w-full max-w-sm h-12 justify-between items-center absolute
+}
+
+.local-banner {
+	@apply w-12 h-full flex justify-center items-center bg-[url('../images/icons/maps.png')] bg-cover bg-center rounded-lg
+}
+
+.payment-switch {
+	@apply w-full flex justify-center items-center relative cursor-pointer
+}
+
+.payment-after {
+	@apply after:content-[''] after:absolute after:bottom-0 after:w-1/2 after:h-[3px] after:bg-[#ea1d2c] after:transition-all after:duration-200
+}
+
+.online {
+	@apply after:left-0
+}
+
+.presencial {
+	@apply after:left-1/2
+}
+
+.pay-in-site-button {
+	@apply w-full pb-2 text-center text-[#ea1d2c] font-semibold font-ifood uppercase transition-all duration-200
+}
+
+.pay-in-person-button {
+	@apply w-full pb-2 text-center text-neutral-500 font-semibold font-ifood uppercase transition-all duration-200
+}
+
+.payments-container {
+	@apply w-full h-full absolute flex-col gap-y-7 items-center
+}
+
+.payment-method {
+	@apply w-full max-w-96 h-14 flex items-center gap-x-2 border border-neutral-200 rounded-lg shadow p-2 bg-neutral-100 hover:border hover:border-[#ea1d2c]
+}
+
+.payment-title {
+	@apply font-ifood font-semibold text-neutral-800
+}
+
+.black-bg-container {
+	@apply w-full max-w-[602px] h-full flex justify-center items-end bg-neutral-800/30 z-[999] relative
+}
+
+.dinheiro-modal-container {
+	@apply w-full h-44 shadow-menu rounded-t-lg bg-white p-4 flex flex-col justify-between items-center absolute
+}
+
+.dinheiro-modal-buttons {
+	@apply w-full text-lg py-3 rounded text-white font-ifood text-center bg-[#ea1d2c] hover:bg-red-800
+}
+
+.troco-modal-container {
+	@apply w-full min-h-64 shadow-menu rounded-t-lg bg-white p-4 flex-col justify-between items-center absolute
+}
+
+.label-text {
+	@apply text-2xl font-bold text-neutral-600
+}
+
+.troco-input {
+	@apply w-28 rounded-xl text-center border border-black text-lg p-2
+}
+
+.user-addresses-container {
+	@apply w-full h-full justify-center items-center fixed top-0 left-0
+}
+
+.user-addresses-bg-black {
+	@apply w-full max-w-[602px] h-full flex justify-center items-center bg-neutral-900/30 p-2
+}
+
+.user-addresses-modal {
+	@apply w-full max-w-lg flex flex-col items-center h-[30rem] bg-white rounded-lg p-3
+}
+
+.addresses-list {
+	@apply w-full h-full flex gap-y-2 flex-col overflow-y-scroll mt-3 p-2
+}
+
+.address-item {
+	@apply w-full h-14 flex gap-x-3 items-center bg-neutral-100 border border-neutral-300 rounded p-2 cursor-pointer
+}
+
+.modal-endereco {
+	@apply w-full max-w-md h-[25rem] flex flex-col justify-between items-center bg-neutral-100 border border-neutral-400 rounded-xl shadow-md p-3
+}
+
+.pizza-ingredients {
+	@apply w-full max-w-72 min-h-10 font-ifood text-center mt-2 mb-1 text-neutral-800 whitespace-normal text-sm
+}
+
+.pizza-price {
+	@apply tracking-wider text-2xl text-red-600 font-semibold font-ifoodTitle
+}
+
+.slider-container {
+	@apply w-full h-72 translate-y-8 flex justify-center items-end relative
+}
+
+.circle-plate {
+	@apply z-[-1] w-80 h-80 absolute -top-4 opacity-[.8] transition-all duration-[350ms]
+}
+
+.pizza-menu {
+	@apply w-[17rem] h-60 bg-gradient-to-t from-neutral-100 via-neutral-100 via-65% shadow-xl rounded-b-full transition-all duration-200 relative
+}
+
+.pizza-menu-container {
+	@apply w-full flex flex-col items-center p-2 mt-12
+}
+
+.pizza-menu-title {
+	@apply font-ifood font-semibold text-lg
+}
+
+.pizzas-selecionadas-container {
+	@apply w-full min-h-10 flex flex-col gap-y-2 items-center my-3
+}
+
+.pizza-selected {
+	@apply w-40 flex gap-x-3 justify-center bg-[#ea1d2c] rounded-full py-1 relative
+}
+
+.delete-flavor-btn {
+	@apply absolute -top-1 -left-2 bg-neutral-300 rounded-full
+}
+
+.pizza-selected-name {
+	@apply font-ifoodTitle font-bold text-white text-base
+}
+
+.edit-flavor-btn {
+	@apply p-1 absolute -top-1 -right-2.5 bg-neutral-300 rounded-full border border-black
+}
+
+.mais-sabores-button {
+	@apply bg-green-600 text-white font-ifood font-semibold uppercase px-2 py-1 rounded-lg
+}
+
+.adicionar-button {
+	@apply flex gap-x-2 items-center bg-red-600 text-white font-ifood uppercase font-semibold px-2 py-1 rounded-lg
+}
+
+.animate__animated.animate__flipInX {
+ 	--animate-duration: .5s;
+}
+
+.cart-toast {
+	@apply absolute -top-2 -left-2 bg-red-900 text-white rounded px-1 text-sm font-bold shadow-md
+}
+
+.user-guide-container {
+	@apply absolute top-10 w-48 h-48 flex-col justify-center items-center bg-gradient-radial from-neutral-900/90 from-25% p-7 rounded-full z-50
+}
+
+.combos-container, .destaques-container {
+	@apply w-full h-full flex flex-col justify-center p-3
+}
+
+.pizzas-container {
+	@apply w-full h-full flex flex-col justify-center p-3
+}
+
+.section-title {
+	@apply font-ifood font-bold text-2xl mb-2
+}
+
+.product-title {
+	@apply font-semibold text-neutral-700 font-ifood leading-5 break-words
+}
+
+.product-description {
+	@apply font-ifood break-words text-sm text-neutral-600 leading-4 mt-1
+}
+
+.product-price {
+	@apply text-green-700 font-ifood font-bold p-0.5
+}
+
+.product-old-price {
+	@apply text-neutral-500 line-through text-xs ml-1 mt-1
+}
+
+.prod-desc-2 {
+	@apply text-xs font-ifood text-neutral-600
+}
+
+.combos-item, .destaques-item {
+	@apply w-44 min-w-44 h-56 snap-center bg-white flex flex-col items-center rounded shadow-card overflow-hidden border border-transparent hover:border-[#ea1d2c]
+}
+
+.scroll-cardapio {
+	@apply w-full flex gap-3 py-1 overflow-x-auto snap-x
+}
+
+.scroll-cardapio::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.combos-item-info, .destaques-item-info {
+	@apply w-full h-full flex flex-col justify-between p-2
+}
+
+.bebidas-item, .pizzas-item {
+	@apply w-full h-40 flex border-2 border-neutral-200 p-2 shadow-card rounded hover:border-[#ea1d2c]
+}
+
+.bebidas-item-container, .pizzas-item-container {
+	@apply w-full h-full flex flex-col justify-between mr-2
+}
+
+.cupom-container {
+	@apply mx-auto w-full max-w-sm bg-neutral-100 border border-neutral-200 p-2 mt-5 rounded-lg text-center
+}
+
+.cupom-title {
+	@apply font-ifood text-lg font-bold my-3
+}
+
+.cupom-input-container {
+	@apply w-full flex h-12 border border-neutral-300 justify-start bg-white rounded-full overflow-hidden p-1
+}
+
+.cupom-input {
+	@apply w-full h-full pl-2 outline-none font-ifood bg-none
+}
+
+.cupom-button {
+	@apply font-ifood bg-[#ea1d2c] hover:bg-red-800 text-white px-3 py-1 hover:bg-red-800 rounded-full
+}
+
+.boleto {
+	@apply w-full max-w-full h-full flex flex-col items-center justify-between bg-white
+}
+
+.boleto-item {
+	@apply w-full flex justify-between items-center font-ifood
+}
+
+.boleto-total-container {
+	@apply w-full flex justify-between items-center border-t border-neutral-300 px-2 py-2 bg-neutral-100 mt-10
+}
+
+.boleto-button {
+	@apply text-white font-ifood px-5 py-2 bg-[#ea1d2c] hover:bg-red-800 rounded-full
+}
+
+.boleto-total-price {
+	@apply font-bold font-ifood text-lg
+}
+
+.modal-container {
+	@apply fixed top-0 left-0 w-full h-full justify-center items-center bg-neutral-900/75 p-2 z-[999999]
+}
+
+.montar-pizza-modal-container {
+	@apply w-full h-full justify-center items-center fixed top-0 left-0 bg-neutral-900/30 p-2 z-[9999]
+}
+
+.montar-pizza-modal-title {
+	@apply font-ifood text-lg text-[#ea1d2c] my-2 text-center uppercase font-semibold leading-5
+}
+
+.recheio-da-borda-modal {
+	@apply w-full max-w-sm h-4/6 flex flex-col items-start bg-neutral-100 rounded-xl p-2
+}
+
+.recheio-da-borda-item {
+	@apply w-36 h-[185px] p-1 bg-stone-100 border border-neutral-300 rounded-lg hover:border hover:border-[#ea1d2c]
+}
+
+.borda-item-banner {
+	@apply w-full h-full max-h-24 overflow-hidden rounded-lg
+}
+
+.grid-container {
+	@apply w-full h-full flex justify-center items-start mt-5 overflow-y-scroll
+}
+
+.scroll-container {
+	@apply w-full flex gap-3 py-1 overflow-x-auto snap-x
+}
+
+.scroll-container::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.descontos-especiais-modal {
+	@apply w-full max-w-lg h-full flex flex-col items-start bg-neutral-100 rounded-xl p-2
+}
+
+.modal-combos-item {
+	@apply w-40 min-w-40 h-48 snap-center bg-white flex flex-col items-center rounded overflow-hidden border border-white hover:border hover:border-[#ea1d2c]
+}
+
+.modal-bebidas-item {
+	@apply w-36 min-w-36 h-[185px] p-1 bg-neutral-200/30 border border-neutral-300 rounded-lg hover:border hover:border-[#ea1d2c]
+}
+
+.modal-action-buttons {
+	@apply w-full max-w-40 py-2 text-sm font-ifood font-semibold text-center text-white bg-[#ea1d2c] rounded
+}
+
+.finalizar-pedido {
+	@apply block mt-2 text-white text-base font-ifood font-semibold bg-[#ea1d2c] py-1 rounded
+}
+
+.adicionar-mais {
+	@apply block mt-6 text-white text-base font-ifood font-semibold py-1 bg-red-500 rounded
+}
+
+.bebida-modal-container {
+	@apply w-full h-full flex-col justify-start items-center fixed top-0 left-0 bg-white z-[999] p-4
+}
+
+.stepDownButton {
+	@apply w-14 text-lg text-center font-bold py-2 text-white bg-[#ea1d2c] hover:bg-red-800 rounded-l
+}
+
+.bebidas-count {
+	@apply w-16 py-2 font-bold text-lg text-center
+}
+
+.stepUpButton {
+	@apply w-14 text-lg text-center font-bold py-2 text-white bg-[#ea1d2c] hover:bg-red-800 rounded-r
+}
+
+.adicionar-bebida-button {
+	@apply w-full py-2 px-2 text-lg font-semibold text-center rounded font-ifood flex justify-between items-center bg-[#ea1d2c] text-white
+}
+
+.sacola-modal {
+	@apply w-full max-w-[602px] h-full flex justify-center items-end mx-auto bg-neutral-900/40
+}
+
+.sacola-modal-container {
+	@apply w-full min-h-96 bg-white rounded-t-lg flex flex-col justify-start items-center p-5
+}
+
+.sacola-modal-title {
+	@apply font-ifood font-semibold text-lg mb-5
+}
+
+.entrega-date {
+	@apply w-full h-16 flex gap-x-3 justify-start items-center
+}
+
+.sacola-modal-text {
+	@apply w-full pt-5 mb-5 font-ifood font-semibold text-neutral-600 border-t
+}
+
+.sacola-address {
+	@apply w-full h-16 flex justify-between items-center mb-3
+}
+
+.sacola-address-container {
+	@apply w-full h-[3rem] flex gap-x-3 justify-start items-center
+}
+
+.sacola-pix {
+	@apply w-full h-16 flex justify-between items-center border-t
+}
+
+.sacola-pix-container {
+	@apply flex gap-x-3 justify-start items-center
+}
+
+.make-pedido-button {
+	@apply w-full block text-center font-ifood text-white rounded py-2 bg-[#ea1d2c]
+}
+
+.alterar-dados {
+	@apply w-full font-semibold font-ifood py-2 text-[#ea1d2c]
+}
+/*
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}*/
+
+label:has(> input[type="radio"][name="pizza-size"]:checked){
+	background-color: #ea1d2c;
+}
+
+/*input[type="radio"]:not([name="pizza-size"]):checked:before {
+	display: block;
+}*/
+
+input[type="checkbox"]{
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #d4d4d4;
+	margin: 0;
+
+	width: 27px;
+	height: 25px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+input[type="checkbox"]::after {
+	content: " ";
+	position: absolute;
+	width: 65%;
+	height: 65%;
+	background-color: #ea1d2c;
+	display: none;
+	clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+input[type="checkbox"]:checked::after {
+	display: initial;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* INPUTS  DE TAMANHO DA PIZZA */
+/*input[name="pizza-size"] {
+	width: 30px;
+	height: 30px;
+}
+
+input[name="pizza-size"]:checked {
+	background-color: #ea1d2c;
+}
+
+input[name="pizza-size"]::before {
+	content: 'P';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	font-weight: 700;
+	color: black;
+	font-size: 18px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[name="pizza-size"]:checked:before {
+	color: #fff;
+}
+
+input[name="pizza-size"]:nth-child(2):before {
+	content: 'M';
+}
+
+input[name="pizza-size"]:nth-child(3):before {
+	content: 'G';
+}
+
+input[name="pizza-size"]:nth-child(4):before {
+	content: 'GG';
+}
+*/
