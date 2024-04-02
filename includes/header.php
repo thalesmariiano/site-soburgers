@@ -1,7 +1,7 @@
-<header class="header-container bg-neutral-100">
+<header class="header-container">
 	<div class="my-5">
 		<a href="/">
-			<img class="w-60" src="arquivos/images/logo.png">
+			<img class="w-80" src="arquivos/images/logo.png">
 		</a>
 	</div>
 </header>

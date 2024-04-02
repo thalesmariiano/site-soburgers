@@ -163,7 +163,6 @@ const swiper = new Swiper('.swiper', {
 	}
 })
 
-
 if(!window.localStorage.getItem('drag-guide')){
 	showGuide('#drag-guide')	
 	window.localStorage.setItem('drag-guide', 1)
@@ -198,35 +197,50 @@ function adicionarSabores(){
 		showGuide('#click-guide')
 	}
 
-	const burger = burgersArray.find(p => p.id == burger_id)
+	const burger = burgersArray.find(b => b.id == burger_id)
 	sabores.push(burger)
 
 	burgerImage.src = `arquivos/images/burger-${burger.id}.png`
 	burgerImage.dataset.burgerId = burger.id
 	// maisSabores.style.display = 'none'
 	// showGuide('#max-flavor-guide')
-	
 
-	pizzas_selecionadas.innerHTML += `
-		<div class="pizza-selected" data-flavor-id="${burger.id}">
-			<button class="delete-flavor-btn" onClick="removerSabor(${burger.id})">
-				<img class="w-5" src="arquivos/images/icons/x-circle.svg">
-			</button>
-			<p class="pizza-selected-name">${burger.name}</p>
-			<button class="edit-flavor-btn">
-				<img class="w-3" src="arquivos/images/icons/pencil.svg">
-			</button>
-		</div>
-	`
+	const burgerQntd = sabores.filter(b => b.id == burger_id).length
+
+	if(burgerQntd === 1){
+		pizzas_selecionadas.innerHTML += `
+				<div class="pizza-selected" data-flavor-id="${burger.id}">
+					<button class="delete-flavor-btn" onClick="removerBurger(${burger.id})">
+						<img class="w-5" src="arquivos/images/icons/x-circle.svg">
+					</button>
+					<p class="pizza-selected-name">${burger.name} 1x</p>
+					<button class="edit-flavor-btn">
+						<img class="w-3" src="arquivos/images/icons/pencil.svg">
+					</button>
+				</div>
+			`
+	}else{
+		const flavor = document.querySelector(`[data-flavor-id="${burger.id}"]`)
+		flavor.children[1].innerHTML = `${burger.name} ${burgerQntd}x`
+	}
 }
 
-function removerSabor(id){
+function removerBurger(id){
 	const flavor = document.querySelector(`[data-flavor-id='${id}']`)
-	const pizza = sabores.findIndex(sabor => sabor.id == id)
+	const burgerIndex = sabores.findIndex(sabor => sabor.id == id)
 	const burgerImage = document.querySelector('#burger-image')
+	const burger = sabores.find(b => b.id == id)
+
+	sabores.splice(burgerIndex, 1)
+
+	const burgerQntd = sabores.filter(b => b.id == id).length
+
+	if(burgerQntd >= 1){
+		flavor.children[1].innerHTML = `${burger.name} ${burgerQntd}x`	
+		return	
+	}
 
 	flavor.remove()
-	sabores.splice(pizza, 1)
 	burgerImage.src = "arquivos/images/null.png"
 	maisSabores.style.display = ''
 }
