@@ -213,7 +213,7 @@
 					<p class="font-ifood font-semibold text-neutral-500 text-center text-lg mb-5">Pagamento</p>
 
 					<!--  gap-x-7 -->
-					<div class="flex  justify-center items-center">
+					<div class="flex gap-x-3 justify-center items-center">
 						<button id="pay-pix" class="w-24 h-24 flex gap-y-2 flex-col justify-center items-center font-ifood text-neutral-600 leading-5 btn-pay">
 							<img class="w-8" src="arquivos/images/icons/pix.png">
 							Pague agora <br> com PIX

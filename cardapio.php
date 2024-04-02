@@ -76,9 +76,9 @@
 
 			<div class="scroll-cardapio">
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="destaques-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="destaques-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="destaques-item-info">
@@ -93,9 +93,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="destaques-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="destaques-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="destaques-item-info">
@@ -110,9 +110,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="destaques-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="destaques-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="destaques-item-info">
@@ -127,9 +127,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="destaques-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="destaques-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="destaques-item-info">
@@ -151,9 +151,9 @@
 
 			<div class="scroll-cardapio">
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="combos-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="combos-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="combos-item-info">
@@ -168,9 +168,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="combos-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="combos-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="combos-item-info">
@@ -185,9 +185,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="combos-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="combos-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="combos-item-info">
@@ -202,9 +202,9 @@
 					</div>
 				</div>
 
-				<div onClick="window.location.href = 'montar-pizza.php'" class="combos-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="combos-item cursor-pointer">
 					<div class="w-full h-full max-h-24">
-						<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+						<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 					</div>
 
 					<div class="combos-item-info">
@@ -227,7 +227,7 @@
 			<h1 class="section-title">Pizzas</h1>
 
 			<div class="w-full flex flex-col gap-y-3 justify-start items-center mt-2">
-				<div onClick="window.location.href = 'montar-pizza.php'" class="pizzas-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
 							<p class="product-title text-xl">Pizza Calabresa</p>
@@ -238,9 +238,9 @@
 						</div>
 						<p class="product-price">R$ 0,00</p>
 					</div>
-					<img class="w-32 rounded" src="arquivos/images/pizza-banner.png">
+					<img class="w-32 rounded" src="arquivos/images/burger-combo-banner.png">
 				</div>
-				<div onClick="window.location.href = 'montar-pizza.php'" class="pizzas-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
 							<p class="product-title text-xl">Pizza Calabresa</p>
@@ -251,9 +251,9 @@
 						</div>
 						<p class="product-price">R$ 0,00</p>
 					</div>
-					<img class="w-32 rounded" src="arquivos/images/pizza-banner.png">
+					<img class="w-32 rounded" src="arquivos/images/burger-combo-banner.png">
 				</div>
-				<div onClick="window.location.href = 'montar-pizza.php'" class="pizzas-item cursor-pointer">
+				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
 							<p class="product-title text-xl">Pizza Calabresa</p>
@@ -264,7 +264,7 @@
 						</div>
 						<p class="product-price">R$ 0,00</p>
 					</div>
-					<img class="w-32 rounded" src="arquivos/images/pizza-banner.png">
+					<img class="w-32 rounded" src="arquivos/images/burger-combo-banner.png">
 				</div>
 			</div>
 		</section>

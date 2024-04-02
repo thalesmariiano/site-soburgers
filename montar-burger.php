@@ -29,11 +29,6 @@
 						Categoria: <span id="category-name">Todas</span>
 						<img src="arquivos/images/icons/caret-down-fill.svg">
 					</button>
-
-				<!-- 	<button id="size-button" data-size-active="false" class="select-button">
-						Tamanho: <span id="size-name">Gigante</span>
-						<img src="arquivos/images/icons/caret-down-fill.svg">
-					</button> -->
 				</div>
 
 				<div id="select-container" class="select-container">
@@ -41,35 +36,35 @@
 					<form class="form-container">
 						<div class="select-col">
 							<label class="w-full flex items-center gap-x-2 cursor-pointer">
-								<input type="checkbox" name="pizza-type" value="Promoção" checked>
+								<input type="checkbox" name="burger-type" value="Promoção" checked>
 								<div class="w-full flex justify-between items-center">
 									<span class="select-item">Promoção</span>
 									<span class="select-item">R$10,00</span>
 								</div>
 							</label>
 							<label class="w-full flex items-center gap-x-2 cursor-pointer">
-								<input type="checkbox" name="pizza-type" value="Clássicas" checked>
+								<input type="checkbox" name="burger-type" value="Clássicas" checked>
 								<div class="w-full flex justify-between items-center">
 									<span class="select-item">Clássicas</span>
 									<span class="select-item">R$10,00</span>
 								</div>
 							</label>
 							<label class="w-full flex items-center gap-x-2 cursor-pointer">
-								<input type="checkbox" name="pizza-type" value="Exclusivas" checked>
+								<input type="checkbox" name="burger-type" value="Exclusivas" checked>
 								<div class="w-full flex justify-between items-center">
 									<span class="select-item">Exclusivas</span>
 									<span class="select-item">R$10,00</span>
 								</div>
 							</label>
 							<label class="w-full flex items-center gap-x-2 cursor-pointer">
-								<input type="checkbox" name="pizza-type" value="Premium" checked>
+								<input type="checkbox" name="burger-type" value="Premium" checked>
 								<div class="w-full flex justify-between items-center">
 									<span class="select-item">Premium</span>
 									<span class="select-item">R$10,00</span>
 								</div>
 							</label>
 							<label class="w-full flex items-center gap-x-2 cursor-pointer">
-								<input type="checkbox" name="pizza-type" value="Doces" checked>
+								<input type="checkbox" name="burger-type" value="Doces" checked>
 								<div class="w-full flex justify-between items-center">
 									<span class="select-item">Doces</span>
 									<span class="select-item">R$10,00</span>
@@ -99,38 +94,6 @@
 					</div>
 				</div>
 
-				<!-- <div id="size-container" class="size-container">
-					<p class="font-ifood text-center mt-3 text-lg font-bold">Selecione o tamanho:</p>
-					<form class="form-container mt-3">
-						<div class="flex gap-x-2 justify-center items-center">
-							<label class="w-14 h-14 text-xs/4 flex justify-center items-center font-ifood bg-neutral-400 rounded-full text-white text-center cursor-pointer">
-								<input class="hidden" type="radio" name="pizza-size" value="Pequena">				Pequena
-								20cm
-							</label>
-							<label class="w-16 h-16 text-sm/4 flex justify-center items-center font-ifood bg-neutral-400 rounded-full text-white text-center cursor-pointer">
-								<input class="hidden" type="radio" name="pizza-size" value="Média">
-								Média
-								30cm		
-							</label>
-							<label class="w-20 h-20 text-base/4 flex justify-center items-center font-ifood bg-neutral-400 rounded-full text-white text-center cursor-pointer">
-								<input class="hidden" type="radio" name="pizza-size" value="Grande">
-								Grande
-								35cm								
-							</label>
-							<label class="w-24 h-24 text-lg/5 flex justify-center items-center font-ifood bg-neutral-400 rounded-full text-white text-center cursor-pointer">
-								<input class="hidden" type="radio" name="pizza-size" value="Gigante" checked>
-								Gigante
-								40cm							
-							</label>
-						</div>
-					</form>
-					<div class="w-full flex gap-x-4 justify-center items-center mt-3">
-						<p class="font-ifood text-neutral-400 text-sm">Escolha até 2 sabores</p>
-						<div class="w-0.5 h-8 bg-neutral-300"></div>
-						<p class="font-ifood text-neutral-400 text-sm">Escolha até 3 sabores</p>
-					</div>
-				</div>
- -->
 				<div id="select-guide" onClick="closeGuide(this)" class="absolute top-40 z-[9999] hidden">
 					<div class="select-guide-container">
 						<div class="-rotate-45">
@@ -146,11 +109,11 @@
 
 				<div class="flex flex-col items-center gap-y-3 mt-5">
 					<div class="w-full flex flex-col items-center">
-						<p id="pizza-name" class="font-ifoodTitle text-2xl font-bold">Pizza 1:</p>
-						<p id="pizza-ingredients-list" class="pizza-ingredients">
+						<p id="burger-name" class="font-ifoodTitle text-2xl font-bold">Burger 1:</p>
+						<p id="burger-ingredients-list" class="pizza-ingredients">
 							sabor 1, sabor 2, sabor 3, sabor 4
 						</p>
-						<p id="pizza-price" class="pizza-price">R$00.00</p>
+						<p id="burger-price" class="pizza-price">R$00.00</p>
 					</div>
 				</div>
 
@@ -162,28 +125,36 @@
 					<!-- prato da pizza -->
 					<img class="w-72 h-72 drop-shadow-[0_0_15px_rgba(0,0,0,.6)]" src="arquivos/images/pizza-plate.png">
 
+					<!-- Imagem que fica ao fundo ao selecionar a pizza -->
+					<div class="absolute top-4 w-64 h-64">
+						<div class="w-full h-full flex justify-center items-center">
+							<img id="burger-image" class="absolute w-64 h-64 rounded-full" src="arquivos/images/null.png" data-burgerId="">
+						</div>
+					</div>
+					<!--  -->
+
 					<!-- swiper slider -->
 					<div class="absolute w-full">
 						<div class="swiper h-96">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="w-full h-full flex justify-center items-end pb-4">
-									    <img class="w-64 h-64 path-default transition-all duration-300" data-id="1" src="arquivos/images/pizza-1.png">
+									    <img class="w-64 h-64 rounded-full" data-id="1" src="arquivos/images/burger-1.png">
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div class="w-full h-full flex justify-center items-end pb-4">
-									   <img class="w-64 h-64 path-default transition-all duration-300" data-id="2" src="arquivos/images/pizza-2.png">
+									   <img class="w-64 h-64 rounded-full" data-id="2" src="arquivos/images/burger-2.png">
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div class="w-full h-full flex justify-center items-end pb-4">   
-									    <img class="w-64 h-64 path-default transition-all duration-300" data-id="3" src="arquivos/images/pizza-3.png">
+									    <img class="w-64 h-64 rounded-full" data-id="3" src="arquivos/images/burger-3.png">
 									</div> 
 								</div>
 								<div class="swiper-slide">
 									<div class="w-full h-full flex justify-center items-end pb-4"> 	
-									    <img class="w-64 h-64 path-default transition-all duration-300" data-id="4" src="arquivos/images/pizza-3.png">
+									    <img class="w-64 h-64 rounded-full" data-id="4" src="arquivos/images/burger-4.png">
 									</div>    
 								</div>
 							</div>
@@ -273,7 +244,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio de catupiry</p>
@@ -286,7 +257,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio de chocolate</p>
@@ -299,7 +270,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio de brisadeiro</p>
@@ -312,7 +283,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio de pizza</p>
@@ -325,7 +296,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio topzera</p>
@@ -338,7 +309,7 @@
 
 					<div onClick="fecharModalBordas()" class="recheio-da-borda-item cursor-pointer">
 						<div class="borda-item-banner">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 						<div class="w-full px-1 py-2">
 							<p class="product-title">Recheio massa</p>
@@ -366,7 +337,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -382,7 +353,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -398,7 +369,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -417,7 +388,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -433,7 +404,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -449,7 +420,7 @@
 
 					<div class="modal-combos-item">
 						<div class="w-full h-full max-h-24">
-							<img class="w-full h-full" src="arquivos/images/pizza-banner.png">
+							<img class="w-full h-full" src="arquivos/images/burger-combo-banner.png">
 						</div>
 
 						<div class="destaques-item-info">
@@ -538,6 +509,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="arquivos/js/utils.js"></script>
-	<script src="arquivos/js/montar-pizza.js"></script>
+	<script src="arquivos/js/montar-burger.js"></script>
 </body>
 </html>
