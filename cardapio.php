@@ -224,13 +224,13 @@
 		<div class="w-full h-12 bg-neutral-100 mt-5 mb-2"></div>
 
 		<section class="pizzas-container">
-			<h1 class="section-title">Pizzas</h1>
+			<h1 class="section-title">Hamburgers</h1>
 
 			<div class="w-full flex flex-col gap-y-3 justify-start items-center mt-2">
 				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
-							<p class="product-title text-xl">Pizza Calabresa</p>
+							<p class="product-title text-xl">X-Burger</p>
 							<div class="w-full max-w-64 mt-1">
 								<p class="prod-desc-2">Massa, calabresa, queijo, presunto,
 									açucar, o elemento X e tudo que há de bom.</p>
@@ -243,7 +243,7 @@
 				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
-							<p class="product-title text-xl">Pizza Calabresa</p>
+							<p class="product-title text-xl">X-Tudo</p>
 							<div class="w-full max-w-64 mt-1">
 								<p class="prod-desc-2">Massa, calabresa, queijo, presunto,
 									açucar, o elemento X e tudo que há de bom.</p>
@@ -256,7 +256,7 @@
 				<div onClick="window.location.href = 'montar-burger.php'" class="pizzas-item cursor-pointer">
 					<div class="pizzas-item-container">
 						<div>
-							<p class="product-title text-xl">Pizza Calabresa</p>
+							<p class="product-title text-xl">Cheease</p>
 							<div class="w-full max-w-64 mt-1">
 								<p class="prod-desc-2">Massa, calabresa, queijo, presunto,
 									açucar, o elemento X e tudo que há de bom.</p>

@@ -2,6 +2,6 @@
 
 <footer class="w-full mb-36" id="footer">
 	<div class="w-full text-center px-3">
-		<p class="font-ifood text-neutral-900">© Copyright 2024 - SóPizzas - Todos os direitos reservados.</p>
+		<p class="font-ifood text-neutral-900">© Copyright 2024 - SóBurgers - Todos os direitos reservados.</p>
 	</div>
 </footer>
